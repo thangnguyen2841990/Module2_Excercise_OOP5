@@ -71,10 +71,10 @@ public class Main {
                     break;
                 }
                 case 3: {
+                    Scanner inputName = new Scanner(System.in);
                     System.out.println("----Tìm nhân viên theo tên----");
                     System.out.println("Nhập tên cán bộ cần tim: ");
-                    scanner.nextLine();
-                    String name = scanner.nextLine();
+                    String name = inputName.nextLine();
                     cadresManagement.findCardes(name);
 
                     break;
