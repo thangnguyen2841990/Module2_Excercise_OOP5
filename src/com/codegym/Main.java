@@ -33,38 +33,22 @@ public class Main {
                     switch (choice1) {
                         case 1: {
                             System.out.println("---Thêm công nhân---");
-                            System.out.println("Nhập vị trí bạn muốn thêm: ");
-                            int index = scanner.nextInt();
-                            if (index - 1 < 0 || index - 1 > cadresManagement.getWorkers().length) {
-                                System.out.println("Vị trí không xác định");
-                            } else {
-                                Worker newWorker = inputNewWorker();
-                                cadresManagement.addnewCardes(index - 1, newWorker);
-                            }
+                            Worker newWorker = inputNewWorker();
+                            cadresManagement.addnewCardes(0, newWorker);
                             break;
                         }
                         case 2: {
                             System.out.println("---Thêm kỹ sư---");
-                            System.out.println("Nhập vị trí bạn muốn thêm: ");
-                            int index = scanner.nextInt();
-                            if (index - 1 < 0 || index - 1 > cadresManagement.getEngineers().length) {
-                                System.out.println("Vị trí không xác định");
-                            } else {
-                                Engineer newEngineer = inputNewEngineer();
-                                cadresManagement.addNewCardes(index - 1, newEngineer);
-                            }
+                            Engineer newEngineer = inputNewEngineer();
+                            cadresManagement.addNewCardes(0, newEngineer);
+
                             break;
                         }
                         default: {
                             System.out.println("---Thêm nhân viên---");
-                            System.out.println("Nhập vị trí bạn muốn thêm: ");
-                            int index = scanner.nextInt();
-                            if (index - 1 < 0 || index - 1 > cadresManagement.getStaffs().length) {
-                                System.out.println("Vị trí không xác định");
-                            } else {
-                                Staff newStaff = inputNewStaff();
-                                cadresManagement.addNewCardes(index - 1, newStaff);
-                            }
+                            Staff newStaff = inputNewStaff();
+                            cadresManagement.addNewCardes(0, newStaff);
+
                             break;
                         }
                     }
