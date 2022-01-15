@@ -51,7 +51,7 @@ public class Main {
                                 System.out.println("Vị trí không xác định");
                             } else {
                                 Engineer newEngineer = inputNewEngineer();
-                                cadresManagement.addNewCardes(index-1,newEngineer);
+                                cadresManagement.addNewCardes(index - 1, newEngineer);
                             }
                             break;
                         }
@@ -63,7 +63,7 @@ public class Main {
                                 System.out.println("Vị trí không xác định");
                             } else {
                                 Staff newStaff = inputNewStaff();
-                                cadresManagement.addNewCardes(index-1,newStaff);
+                                cadresManagement.addNewCardes(index - 1, newStaff);
                             }
                             break;
                         }
@@ -71,6 +71,11 @@ public class Main {
                     break;
                 }
                 case 3: {
+                    System.out.println("----Tìm nhân viên theo tên----");
+                    System.out.println("Nhập tên cán bộ cần tim: ");
+                    scanner.nextLine();
+                    String name = scanner.nextLine();
+                    cadresManagement.findCardes(name);
 
                     break;
                 }
@@ -115,6 +120,7 @@ public class Main {
         String majors = scanner.nextLine();
         return new Engineer(name, birthDay, sex, address, majors);
     }
+
     public static Staff inputNewStaff() {
         scanner.nextLine();
         System.out.println("Họ và tên: ");
@@ -127,7 +133,7 @@ public class Main {
         String address = scanner.nextLine();
         System.out.println("Nhập công việc: ");
         String job = scanner.nextLine();
-        return new Staff(name,birthDay,sex,address,job);
+        return new Staff(name, birthDay, sex, address, job);
     }
 
 }

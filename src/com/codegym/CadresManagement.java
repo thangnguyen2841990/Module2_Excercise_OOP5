@@ -91,4 +91,19 @@ public class CadresManagement {
             System.out.println(staffs[i]);
         }
     }
+    public void findCardes(String name){
+
+        for (int i = 0; i < workers.length; i++) {
+            if (workers[i].getName().equals(name)){
+                System.out.println(workers[i]);
+            } else if (engineers[i].getName().equals(name)){
+                System.out.println(engineers[i]);
+            }else if (staffs[i].getName().equals(name)){
+                System.out.println(staffs[i]);
+            }else{
+                System.out.println("Không tìm thấy "+ name);
+            }
+
+        }
+    }
 }
